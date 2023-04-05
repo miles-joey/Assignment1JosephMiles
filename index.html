@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Offside&display=swap" rel="stylesheet">
+    <!-- font awesome icons -->
+    <script src="https://kit.fontawesome.com/414adb1e7e.js" crossorigin="anonymous"></script>
+    <title>Panda Sanctuary by Joey Miles</title>
+</head>
+
+
+
+
+<!-- Hello Marker!  Please note i just bought an external monitor and was doing the assignment on there
+it is 32inch wide, please note i did not realise my assignment not be properly formated for regular desktop or laptop screens, true to to mark it on a larger scren if possible -->
+
+<body>
+    <header id="Home">
+        <div class="wrapper">
+            <nav>
+                <div class="logo">Panda<br> Sanctuary
+                </div>
+                <div>
+                    <ul id="headerNav">
+                        <li><a href="#Home">Home</a></li>
+                        <li><a href="#About">About</a></li>
+                        <li><a href="#Blog">Blog</a></li>
+                        <li><a href="#Contact">Contact</a></li>
+                    </ul>
+                </div>    
+            </nav>
+            
+            <div class="headerSides">
+                <div class="leftSide">
+                    <h1>A safe and loving place for all pandas</h1>
+                </div>                   
+                <div class="rightSide">
+                    <div class="iconSideRight">
+                        <ul>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-snapchat"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="about" id="About">
+        <div class="wrapper">
+            <h2>Our New Friends</h2>
+            <div class="gallery">
+                <div class="galleryImg"><img src="./assets/gallery-image-1@2x.png" alt="Panda eating stock of a plant"></div>
+                <div class="galleryImg"><img src="./assets/gallery-image-2@2x.png" alt="Panda looking out over a log"></div>
+                <div class="galleryImg" id="galleryImg3"><img src="./assets/gallery-image-3@2x.png" alt="Two pandas have a cuddle"></div>
+            </div>
+
+            <!-- text and image area side by side -->
+            <div class="moreAbout">
+                <div class="imgContainer">
+                    <img src="./assets/small-box@2x.png" alt="A young panda looks down from atop a tree">
+                </div>
+                <div class="textContainer">
+                    <h2>More about our park</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus quo libero error rerum corporis illo sequi cumque esse temporibus dolor ducimus tempore ea nihil illum natus eaque quibusdam omnis, praesentium minus iusto neque quod ad! Similique iusto recusandae hic voluptatem commodi quisquam, sequi laudantium incidunt nostrum aliquam voluptate ipsam cum.</p>
+                    <button>READ MORE</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="blog" id="Blog">
+        <div class="textBox" id="bobby">
+            <h2>Bobby and Bella</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum dignissimos eum exercitationem illum adipisci provident tempora maiores, ipsum dolor eos!</p>
+            <button>READ MORE</button>
+        </div>
+        <div class="imgBox">
+            <img src="./assets/image-2@2x.png" alt="Two baby pandas named Bobby and Bella">
+        </div>
+        <div class="imgBox">
+            <img src="./assets/left-image@2x.png" alt="Panda Marco is now all grown up">
+        </div>
+        <div class="textBox" id="marco">
+            <h2>Look at Marco now</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum dignissimos eum exercitationem illum adipisci provident tempora maiores, ipsum dolor eos!</p>
+            <button>READ MORE</button>
+        </div>
+    </section>
+
+
+    <section class="contact" id="Contact">
+        <div class="iconBox">
+            <i class="fa-solid fa-gift"></i>
+            <h3>Donations</h3>
+        </div>
+        <div class="iconBox">
+            <!-- i am using the horizontal flipped briefcase
+            because the normal one kept giving me 
+            ' "> ' text after the icon and no matter what I did
+            it would not go away, so i simply fliped the image on its 
+            y-axis as it is symetrical
+            -->
+            <i class="fa-solid fa-briefcase fa-flip-horizontal"></i>
+            <h3>Jobs</h3>
+        </div>
+        <div class="iconBox">
+            <i class="fa-solid fa-calendar-check"></a></i>
+            <h3>Events</h3>
+        </div>  
+    </section>
+
+
+    <footer>
+            <div class="wrapper">
+                <div class="formDiv">
+                    <h3>Stay updated</h3>
+                    <form action="#" method="#" name="signUpForm">
+                        <label for="formInstructions">Subscribe to our newsletter to stay updated.</label><br>
+                        <input type="text" id="emailName" name="emailName" placeholder="email address">
+                        <input type="button" onclick="#" value="SUBSCRIBE">
+                    </form>
+                </div>
+                <div class="footerRight">
+                    <div class="footerAddress">
+                        <h3>Contact</h3>
+                        <p>info@email.com 123 - 456 - 7890<br>
+                        123 some road, Toronto, ON<br>
+                        A5A 5A5, Canada
+                        </p>
+                    </div>
+                    <nav>
+                        <ul class="footerNav">
+                            <li><a href="Home">Home</a></li>
+                            <li><a href="About">About</a></li>
+                            <li><a href="Blog">Blog</a></li>
+                            <li><a href="Contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+    </footer>
+    <p id="copyright">Copyright © 2023 Juno College by Joey Miles</p>
+
+
+</body>
+</html>

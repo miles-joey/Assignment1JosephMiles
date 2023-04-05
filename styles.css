@@ -1,0 +1,567 @@
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+
+/* Styles
+font-family: 'Barlow', sans-serif;
+font-family: 'Offside', cursive;
+
+
+Charcoal
+#2C2D2C
+
+Deep Green
+#116500
+
+White
+#FFFFFF
+
+Pine Two
+#213C28
+
+Duck egg blue
+#D6F1E4
+
+Barlow, Regular, 68.8px
+Line height: 63.7px, Letter spacing: 0.8px
+
+Headings
+Offside, Regular, 42px
+Center
+
+Nav
+Barlow, Bold, 20px
+Right, Line height: 29px
+
+Body Text
+Barlow, Regular, 20px
+Line height: 30px, Letter spacing: 0.2px
+
+logo
+offside, Regular, 20px
+Line height: 20px
+
+buttons
+Offside, Regular, 20px
+Center, Line height: 29px
+
+
+Common break points: ------------------------------------------
+Small Phone (Portrait) - 360px
+Lrg Phone (Portrait) - 420px
+Tablet (Portrait) - 768px
+Tablet (Landscape) - 1024px
+Laptops - 1440px
+Desktop - 1920px
+WideScreen - 2560px
+
+
+
+*/
+
+
+/* html {
+    font-size: 62.5%;
+} */
+
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+* {
+    font-family: 'Barlow', sans-serif;
+    color: #FFFFFF;
+    font-weight: 400;
+}
+
+/* reusedd styling */
+h2, h3, button {
+    font-family: 'Offside', cursive;
+}
+
+/* make everything this font, then override with 
+other font if need be -- "Offside"
+font-family: 'Offside', cursive; */
+
+
+/* HTML ------------------------------------------------- */
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #D6F1E4;
+    color: #2C2D2C;
+}
+
+
+
+/* had to add own hover property for icons 
+the above a:hover would change the background color, but the text color would not apply,
+maybe something with how i have the html? or just a property of i tags with fontawesome???
+im also just assuming all icons aka i tags from font awesome are clickable on this page, some ppl
+might not interpret the donation/jobs/events section icons to be.
+NVM - icons were giving too many issues when and apparently give issues with psyeduo selectors
+look into for future
+*/
+i:hover {
+    background-color: #D6F1E4;
+    color: #2C2D2C;
+}
+
+/*WRAPPER--------------------------------------------------*/
+.wrapper {
+    max-width: 1200px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+    .wrapper {width: 90%;
+    }
+}
+
+/* HEADER-------------------------------------------------------- */
+header {
+    background-image: url(./assets/header-image.png);
+    background-size: cover;
+    
+    width: 100%;
+    height: 100vh;
+}
+
+
+
+/* NAV -------------------------------------------------------------*/
+/* I notice a bit of shadow on the a tags but am ignoring for now
+too hard to tell from design */
+
+.logo {
+    font-family: 'Offside', cursive;
+   
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+#headerNav {
+    display: flex;
+    justify-content: flex-end;
+    
+    /* margin: 40px; */
+    font-weight: bold;
+    font-size: 20px;
+    align-self: right;
+    line-height: 29px;
+}
+
+@media (max-width: 480px) {
+    #headerNav {
+        display: none;
+    }
+
+}
+
+
+
+
+nav li {
+    margin-left: 20px;
+}
+
+/* Title styling */
+h1 {
+    font-family: 'Barlow', sans-serif;
+    font-size: 68.8px;
+    line-height: 63.7px;
+    letter-spacing: 0.8px;
+
+    margin: 0;
+    
+}
+/* having trouble with mediq quaries
+@media (min-width: 1200px) {
+    h1 {
+        font-size: 50%;
+    }
+} */
+
+
+.headerSides {
+    display: flex;
+    width: 100% ;
+}
+
+.leftSide {
+width: 80%;
+}
+
+
+.rightSide {
+    display: flex;
+    justify-content: flex-end;
+    width: 45%;
+    /* no i cannot explain why i set this to 45 and the left side to 80, but it seems
+    to give the exact h1 layout i need, any messing with it breaks it 
+    even though it should equal 100% */
+}
+
+
+.iconSideRight {
+    display: flex;
+    justify-content: column;
+   
+   /* maybe convuluted but used extra div to get to right of container
+   then positioned out of wrapper using position absolute below, 
+   experiment with position fixed in future */
+    
+    position:absolute;
+    right: 20px;
+}
+
+.iconSideRight i {
+    color: #FFFFFF;
+}
+
+
+
+
+
+
+/* SECTION ABOUT ------------------------------------------------------------*/
+.about {
+    background-color: #D6F1E4;
+    padding: 40px 0;
+    
+}
+
+.about h2 {
+    color: #116500;
+    text-align: center;
+    margin-top: 0px;
+
+}
+
+/* GALLERY ---------------------------------------------------------------*/
+.gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.gallery ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.galleryImg {
+    flex-basis: calc(33% - 20px);
+    /* margin: 10px; */
+}
+
+@media (max-width: 480px) {
+    #galleryImg3 {
+        display: none;
+    }
+
+    .galleryImg {
+        flex-basis: calc(50% - 5px);
+    }
+}
+
+
+
+
+/*MORE ABOUT OUR PARK ---------------------------------------*/
+
+.moreAbout {
+    margin-top: 50px;
+    /* above TO CREATE SPACE AWAY FROM GALLERY SECTION */
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+   
+}
+
+@media (max-width: 480px) {
+    .moreAbout {flex-direction: column;
+    }
+
+    /* .imgContainer img {
+        display: none;
+        background-image: url(./assets/gallery-image-3@2x.png);
+    }
+
+    not working */
+
+
+}
+
+
+
+
+
+
+/* <div class="imgContainer">
+    <img src="./assets/small-box@2x.png" alt="A young panda looks down from atop a tree">
+</div>
+how do i change this img source via css? */
+
+.imgContainer {
+    /* width: 35 vw; 
+    do i need to touch anything here anymore????*/
+}
+
+.textContainer {
+    /* using gap above gets rid of need for this
+    padding: 0 0 0 20px; */
+    max-width: 60%; 
+}
+
+.moreAbout h2 {
+    color: #116500;
+    text-align: left;
+}
+
+.moreAbout p {
+    color: #2C2D2C;
+}
+
+
+button {
+    /* font established above with all h2's and h3's */
+    font-size: 20px;
+    border-radius: 0;
+    line-height: 29px;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #116500;
+    color: #FFFFFF;
+    border: 0;
+}
+
+
+/* .galleryImg {
+    width: 100px;
+    height:auto;
+} */
+
+
+
+/* SECTION Blog -------------------------------------------------------------*/
+/*This is the 2x2 section with Bobby and Bella*/
+/*these first two element i looked at this site for inspiration
+https://codepen.io/mogpt/pen/ebXdzg
+i understand most of it, but dont understand why im flexing in a column and how that makes it now work
+i also think i broke it at somepoint by adjusting another unrelated element, otherwise it was working perfectly
+*/
+.blog {
+    background-color:#213C28;
+     min-height: 100%; 
+     /*not sure about this */
+    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.blog div {
+   display: flex;
+   flex-basis: 50%; 
+  
+   justify-content: center;
+   flex-direction: column;
+}
+
+/* #bobby {
+    max-width: 1200px;
+    width: 45%;
+    margin: 0 auto;
+
+    no idea but had this at one point to not break it.
+
+} */
+
+.blog h2 {
+    color:#FFFFFF;
+}
+ 
+
+.blog h3 {
+    font-size: 42px;
+}
+
+
+/* .textBox {
+    padding: 0 20%;
+} */
+
+.textBox {
+    background-color: #FFFFFF;
+    color: #116500;
+    display: inline-block;
+    /* keeps getting elongatted due to flexbasis
+    inline block trying to reset its normal properties but not working */
+    
+    max-width: 180px;
+}
+
+
+#bobby {
+    padding: 0px 40px 0px 10%;
+}
+
+#bobby button {
+
+}
+
+#marco {
+    padding: 0px 10% 0px 40px;
+}
+
+#marco button {
+
+}
+
+@media (max-width: 480px) {
+    .blog {
+        flex-direction: column;
+    }
+/* 
+    #bobby {
+        order: -1;
+    }     not working, doesnt seem to awknowledge imgs*/
+}
+
+
+
+/* SECTION contact------------------------------------------- */
+.contact {
+    color: #2C2D2C;
+    padding: 5vh; 
+    background-color: #D6F1E4;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+@media (max-width: 480px) {
+    .contact {
+        flex-direction: column;
+    }
+}
+
+
+.iconBox {
+    text-align: center;
+
+
+    /* none of below working */
+    /* justify-content: space-around;
+    margin: 0 auto;
+    text-align: center; 
+    
+    nvm guess i fixed*/
+
+}
+
+i {
+    color:#2C2D2C;
+}
+
+.contact h3 {
+    color: #116500;
+}
+
+
+/* FOOTER ---------------------------------------------- */
+footer {
+    background-color: #213C28;
+    padding: 50px 0;
+}
+
+
+/* FORM STYLING  ------------------*/
+form {
+    color:#2C2D2C;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input[type=text] {
+    color:#2C2D2C;
+    padding: 10px 20px;
+    margin: 0;
+    border-radius: 0px;
+    border: 0;
+}
+
+/* #emailName {
+    width: 70%;
+    if i can figure out the calc i can make this dyanmic
+} */
+
+input[type=button] {
+    background-color: #2C2D2C;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    margin: 0;
+    border-radius: 0px;
+    border: 0;
+}
+
+footer .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.formDiv {
+    flex-basis: 50%;
+}
+    
+.footerRight {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerAddress {
+    line-height: 120%;
+    
+}
+
+footer p {
+    text-align: left;
+}
+
+.footerNav {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#copyright {
+    background-color: #2C2D2C;
+    text-align: center;
+    margin: 0 auto;
+}
+
