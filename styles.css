@@ -61,9 +61,6 @@ Tablet (Landscape) - 1024px
 Laptops - 1440px
 Desktop - 1920px
 WideScreen - 2560px
-
-
-
 */
 
 
@@ -89,6 +86,10 @@ h2, h3, button {
     font-family: 'Offside', cursive;
 }
 
+h2, h3 {
+    font-size: 42px;
+}
+
 /* make everything this font, then override with 
 other font if need be -- "Offside"
 font-family: 'Offside', cursive; */
@@ -107,8 +108,6 @@ a:hover {
     background-color: #D6F1E4;
     color: #2C2D2C;
 }
-
-
 
 /* had to add own hover property for icons 
 the above a:hover would change the background color, but the text color would not apply,
@@ -135,6 +134,12 @@ i:hover {
     }
 }
 
+/* <!-- Hello Marker!  Please note i just bought an external monitor and was doing the assignment on there
+it is 32inch wide, please note i did not realise my assignment not be properly formated for regular desktop or laptop screens, true to to mark it on a larger scren if possible 
+
+also i had the webpage zoomed into 150% which seems to make some difference!!!!!
+--> */
+
 /* HEADER-------------------------------------------------------- */
 header {
     background-image: url(./assets/header-image.png);
@@ -143,8 +148,6 @@ header {
     width: 100%;
     height: 100vh;
 }
-
-
 
 /* NAV -------------------------------------------------------------*/
 /* I notice a bit of shadow on the a tags but am ignoring for now
@@ -178,9 +181,6 @@ nav {
 
 }
 
-
-
-
 nav li {
     margin-left: 20px;
 }
@@ -202,7 +202,6 @@ h1 {
     }
 } */
 
-
 .headerSides {
     display: flex;
     width: 100% ;
@@ -212,7 +211,6 @@ h1 {
 width: 80%;
 }
 
-
 .rightSide {
     display: flex;
     justify-content: flex-end;
@@ -221,7 +219,6 @@ width: 80%;
     to give the exact h1 layout i need, any messing with it breaks it 
     even though it should equal 100% */
 }
-
 
 .iconSideRight {
     display: flex;
@@ -238,10 +235,6 @@ width: 80%;
 .iconSideRight i {
     color: #FFFFFF;
 }
-
-
-
-
 
 
 /* SECTION ABOUT ------------------------------------------------------------*/
@@ -311,7 +304,6 @@ width: 80%;
 
     not working */
 
-
 }
 
 
@@ -342,6 +334,8 @@ how do i change this img source via css? */
 
 .moreAbout p {
     color: #2C2D2C;
+    font-size: 20px;
+    letter-spacing: 0.2px;
 }
 
 
@@ -365,12 +359,17 @@ button {
 
 
 
-/* SECTION Blog -------------------------------------------------------------*/
+/* SECTION Blog -------------------------------------------------------------
+-----------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------*/
 /*This is the 2x2 section with Bobby and Bella*/
 /*these first two element i looked at this site for inspiration
 https://codepen.io/mogpt/pen/ebXdzg
 i understand most of it, but dont understand why im flexing in a column and how that makes it now work
-i also think i broke it at somepoint by adjusting another unrelated element, otherwise it was working perfectly
+i also think i broke it at somepoint by adjusting another unrelated element, otherwise it was working perfectly,
+update:  had this PERFECT last night, go to open it now and its completely broken, havnt changed a single thing
+trying to fix but might not have time before submission.
 */
 .blog {
     background-color:#213C28;
@@ -404,7 +403,7 @@ i also think i broke it at somepoint by adjusting another unrelated element, oth
 }
  
 
-.blog h3 {
+.textBox h3 {
     font-size: 42px;
 }
 
@@ -414,30 +413,31 @@ i also think i broke it at somepoint by adjusting another unrelated element, oth
 } */
 
 .textBox {
-    background-color: #FFFFFF;
     color: #116500;
     display: inline-block;
     /* keeps getting elongatted due to flexbasis
     inline block trying to reset its normal properties but not working */
+
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.2px;
     
-    max-width: 180px;
 }
 
 
 #bobby {
     padding: 0px 40px 0px 10%;
+  
 }
 
-#bobby button {
+#bobby button,
+#marco button {
+    max-width: 180px;
 
 }
 
 #marco {
     padding: 0px 10% 0px 40px;
-}
-
-#marco button {
-
 }
 
 @media (max-width: 480px) {
@@ -484,10 +484,12 @@ i also think i broke it at somepoint by adjusting another unrelated element, oth
 
 i {
     color:#2C2D2C;
+    font-size: 40px;
 }
 
 .contact h3 {
     color: #116500;
+    margin-top: 30px;
 }
 
 
@@ -513,12 +515,25 @@ input[type=text] {
     margin: 0;
     border-radius: 0px;
     border: 0;
+    width: 50%;
+   
 }
 
 /* #emailName {
     width: 70%;
     if i can figure out the calc i can make this dyanmic
 } */
+
+
+
+footer .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.formDiv {
+    flex-basis: 70%;
+}
 
 input[type=button] {
     background-color: #2C2D2C;
@@ -528,19 +543,11 @@ input[type=button] {
     border-radius: 0px;
     border: 0;
 }
-
-footer .wrapper {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.formDiv {
-    flex-basis: 50%;
-}
     
 .footerRight {
     display: flex;
     justify-content: space-between;
+    margin: 0;
 }
 
 .footerAddress {
